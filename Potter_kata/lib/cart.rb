@@ -10,7 +10,9 @@ class Cart
     total = 0
 
     while @ordered_items.size > 0         # 當客戶還有書籍尚未結帳時
-      if @ordered_items.size == 4
+      if @ordered_items.size == 5
+        total = total + 5 * PRICE * 0.80
+      elsif @ordered_items.size == 4
         total = total + 4 * PRICE * 0.85
       elsif @ordered_items.size == 3
         total = total + 3 * PRICE * 0.9
